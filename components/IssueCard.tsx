@@ -23,6 +23,7 @@ export default function IssueCard({ issue, onStatusChange }: Props) {
     <div
       ref={setNodeRef}
       style={style}
+      data-status={issue.status}
       className={`card ${isDragging ? "dragging" : ""}`}
       {...attributes}
       {...listeners}
