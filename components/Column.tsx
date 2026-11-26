@@ -16,7 +16,7 @@ export default function Column({ status, label, issues, onStatusChange }: Props)
   const { setNodeRef, isOver } = useDroppable({ id: status });
 
   return (
-    <div ref={setNodeRef} className={`column ${isOver ? "over" : ""}`}>
+    <div ref={setNodeRef} data-status={status} className={`column ${isOver ? "over" : ""}`}>
       <h2>
         {label}
         <span className="count">{issues.length}</span>
